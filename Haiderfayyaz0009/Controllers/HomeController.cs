@@ -1,8 +1,13 @@
-﻿using Haiderfayyaz0009.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using task3.Models;
 
-namespace Haiderfayyaz0009.Controllers
+namespace task3.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,7 +20,18 @@ namespace Haiderfayyaz0009.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Message = "Message is Recieved"
             return View();
+        }
+        public IActionResult task(string fname, string lanme, string email, char pno)
+        {
+
+            return View(Index);
+        }
+        public IActionResult task(string email, string email, string email, char pno)
+        {
+
+            return View(Index);
         }
 
         public IActionResult Privacy()
@@ -29,4 +45,3 @@ namespace Haiderfayyaz0009.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
-}
